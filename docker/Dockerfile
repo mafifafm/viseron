@@ -19,7 +19,7 @@ RUN npm ci \
   # Move index.html into the static folder
   && mv /frontend/build/index.html /frontend/build/static/
 
-FROM roflcoopter/${ARCH}-base:${BASE_VERSION}
+FROM solu/${ARCH}-base:${BASE_VERSION}
 
 WORKDIR /src
 
