@@ -68,7 +68,7 @@ RUN mkdir /opt/openvino && \
 RUN cd /opt/openvino && \
   chmod +x install_build_dependencies.sh && \
   ./install_build_dependencies.sh && \
-  python3 -m install pip --upgrade pip
+  python3 -m install pip --upgrade pip && \
   pip3 install --no-cache-dir -r src/bindings/python/wheel/requirements-dev.txt && \
   mkdir build && cd build && \
   cmake -DCMAKE_BUILD_TYPE=Release .. \
