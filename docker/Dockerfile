@@ -3,9 +3,9 @@ ARG BASE_VERSION
 ARG OPENCV_VERSION
 ARG FFMPEG_VERSION
 ARG WHEELS_VERSION
-FROM roflcoopter/${ARCH}-opencv:${OPENCV_VERSION} as opencv
-FROM roflcoopter/${ARCH}-ffmpeg:${FFMPEG_VERSION} as ffmpeg
-FROM roflcoopter/${ARCH}-wheels:${WHEELS_VERSION} as wheels
+FROM solu/${ARCH}-opencv:${OPENCV_VERSION} as opencv
+FROM solu/${ARCH}-ffmpeg:${FFMPEG_VERSION} as ffmpeg
+FROM solu/${ARCH}-wheels:${WHEELS_VERSION} as wheels
 FROM node:14.18.3 as frontend
 
 WORKDIR /frontend
