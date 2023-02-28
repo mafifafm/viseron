@@ -61,7 +61,7 @@ RUN buildDeps="autoconf \
 ## Install OpenVINO
 RUN mkdir /opt/openvino && \
   cd /opt/openvino && \
-  git clone --recurse-submodules --shallow-submodules --branch ${OPENVINO_VERSION} --depth 1 https://github.com/mafifafm/openvino.git .
+  git clone --recurse-submodules --shallow-submodules --branch ${OPENVINO_VERSION} --depth 1 https://github.com/openvinotoolkit/openvino.git .
 
 #pip3 install --upgrade pip && \
 
