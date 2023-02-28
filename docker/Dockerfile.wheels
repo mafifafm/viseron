@@ -2,7 +2,7 @@ ARG UBUNTU_VERSION
 ARG ARCH
 ARG DLIB_VERSION
 ARG BUILD_FROM
-FROM roflcoopter/${ARCH}-dlib:${DLIB_VERSION} as dlib
+FROM solu/${ARCH}-dlib:${DLIB_VERSION} as dlib
 FROM ${BUILD_FROM} as build
 
 COPY --from=dlib /wheels /wheels
