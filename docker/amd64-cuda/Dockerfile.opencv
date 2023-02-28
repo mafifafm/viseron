@@ -39,6 +39,7 @@ RUN buildDeps="autoconf \
   bzip2 \
   expat \
   libexpat1-dev \
+  libpugixml-dev \
   g++ \
   gcc \
   git \

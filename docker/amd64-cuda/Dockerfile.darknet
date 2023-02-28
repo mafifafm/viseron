@@ -27,7 +27,6 @@ RUN buildDeps="autoconf \
   gcc \
   git \
   libopenblas-dev \
-  libpugixml-dev \
   liblapack-dev \
   libtbb-dev \
   libpng16-16 \
@@ -62,6 +61,10 @@ RUN \
   sed -i -e 's/-gencode arch=compute_50,code=\[sm_50,compute_50\]/-gencode arch=compute_86,code=\[sm_86,compute_86\]/' Makefile && \
   sed -i -e 's/-gencode arch=compute_52,code=\[sm_52,compute_52\] \\/-gencode arch=compute_75,code=\[sm_75,compute_75\]/' Makefile && \
   sed -i -e 's/\t\s*-gencode arch=compute_61,code=\[sm_61,compute_61\]/#-gencode arch=compute_61,code=\[sm_61,compute_61\]/' Makefile && \
+  # sed -i -e 's/-gencode arch=compute_35,code=sm_35 \\/-gencode arch=compute_75,code=[sm_75,compute_75]/' Makefile && \
+  # sed -i -e 's/\s*-gencode arch=compute_50,code=\[sm_50,compute_50\]/#-gencode arch=compute_86,code=\[sm_86,compute_86\]/' Makefile && \
+  # sed -i -e 's/\s*-gencode arch=compute_52,code=\[sm_52,compute_52\]/#-gencode arch=compute_75,code=\[sm_75,compute_75\]/' Makefile && \
+  # sed -i -e 's/\t\s*-gencode arch=compute_61,code=\[sm_61,compute_61\]/#-gencode arch=compute_61,code=\[sm_61,compute_61\]/' Makefile && \
   make && \
   # Compile Darknet with CUDNN_HALF
   sed -i -e 's/CUDNN_HALF=0/CUDNN_HALF=1/' Makefile && \
