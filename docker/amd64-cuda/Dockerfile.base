@@ -36,6 +36,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
   # OpenCV
   libtbb-dev \
   libpng16-16 \
+  libpugixml-dev \
   # OpenCL
   ocl-icd-libopencl1 \
   clinfo \
