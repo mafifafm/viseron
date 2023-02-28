@@ -156,7 +156,7 @@ services:
         UBUNTU_VERSION_NUMBER: "$UBUNTU_VERSION_NUMBER"
         VIDEO_CODEC_SDK_VERSION: "$VIDEO_CODEC_SDK_VERSION"
       cache_from:
-        - roflcoopter/amd64-cuda-ffmpeg:$FFMPEG_VERSION
+        - solu/amd64-cuda-ffmpeg:$FFMPEG_VERSION
     image: solu/amd64-cuda-ffmpeg:$FFMPEG_VERSION
 
   amd64-cuda-opencv:
@@ -171,7 +171,7 @@ services:
         OPENVINO_VERSION: "$OPENVINO_VERSION"
         FFMPEG_VERSION: "$FFMPEG_VERSION"
       cache_from:
-        - roflcoopter/amd64-cuda-opencv:$OPENCV_VERSION
+        - solu/amd64-cuda-opencv:$OPENCV_VERSION
     image: solu/amd64-cuda-opencv:$OPENCV_VERSION
 
   amd64-cuda-dlib:
@@ -184,7 +184,7 @@ services:
         MAKEFLAGS: "$MAKEFLAGS"
         DLIB_VERSION: "$DLIB_VERSION"
       cache_from:
-        - roflcoopter/amd64-cuda-dlib:$DLIB_VERSION
+        - solu/amd64-cuda-dlib:$DLIB_VERSION
     image: solu/amd64-cuda-dlib:$DLIB_VERSION
 
   amd64-cuda-darknet:
@@ -199,7 +199,7 @@ services:
         MAKEFLAGS: "$MAKEFLAGS"
         DARKNET_COMMIT: "$DARKNET_COMMIT"
       cache_from:
-        - roflcoopter/amd64-cuda-darknet:$DARKNET_COMMIT
+        - solu/amd64-cuda-darknet:$DARKNET_COMMIT
     image: solu/amd64-cuda-darknet:$DARKNET_COMMIT
 
   amd64-cuda-wheels:
@@ -211,7 +211,7 @@ services:
         BUILD_FROM: ubuntu:$UBUNTU_VERSION
         DLIB_VERSION: "$DLIB_VERSION"
       cache_from:
-        - roflcoopter/amd64-cuda-wheels:$WHEELS_VERSION
+        - solu/amd64-cuda-wheels:$WHEELS_VERSION
     image: solu/amd64-cuda-wheels:$WHEELS_VERSION
 
   amd64-cuda-base:
@@ -228,7 +228,7 @@ services:
         IGC_VERSION: "$IGC_VERSION"
         LEVEL_ZERO_GPU: "$LEVEL_ZERO_GPU"
       cache_from:
-        - roflcoopter/amd64-cuda-base:$BASE_VERSION
+        - solu/amd64-cuda-base:$BASE_VERSION
     image: solu/amd64-cuda-base:$BASE_VERSION
 
   amd64-cuda-viseron:
@@ -244,7 +244,7 @@ services:
         S6_OVERLAY_ARCH: amd64
         S6_OVERLAY_VERSION: "$S6_OVERLAY_VERSION"
       cache_from:
-        - roflcoopter/amd64-cuda-viseron:dev
+        - solu/amd64-cuda-viseron:dev
     image: solu/amd64-cuda-viseron:dev
 
   ################ RPi3 #######################################¤¤
