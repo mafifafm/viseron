@@ -52,6 +52,7 @@ RUN \
   usbutils \
   # OpenCV and FFmpeg Dependencies
   libgomp1 \
+  libpugixml-dev \
   # dlib Dependencies
   libopenblas-base \
   # Install extra apt packages from build-arg
